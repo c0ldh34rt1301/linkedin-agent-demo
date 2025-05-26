@@ -1,0 +1,71 @@
+/**
+ * Global CSS Styles for Clothes Finder Application
+ * 
+ * This file contains:
+ * 1. Tailwind CSS directives - Import Tailwind's styles
+ * 2. Global base styles - Apply to the entire application
+ * 3. Custom CSS - Any custom styles not available in Tailwind
+ */
+
+/* ============================================================================
+   TAILWIND CSS DIRECTIVES
+   ============================================================================
+   
+   These three directives import Tailwind CSS into the application:
+   - @tailwind base: Resets and base element styles
+   - @tailwind components: Component classes (can be customized)
+   - @tailwind utilities: Utility classes (margins, padding, colors, etc.)
+   
+   Order matters: base → components → utilities
+   This allows utilities to override components, which override base styles.
+*/
+
+@tailwind base;       /* Reset styles + base element styling */
+@tailwind components; /* Component layer for custom components */
+@tailwind utilities;  /* Utility classes for layout, spacing, colors, etc. */
+
+/* ============================================================================
+   GLOBAL BASE STYLES
+   ============================================================================
+   
+   These styles apply to the entire application and provide:
+   - Font family fallbacks for better cross-platform compatibility
+   - Font smoothing for better text rendering
+   - Code font family for any code elements
+*/
+
+/* Body element - Main container for the entire application */
+body {
+  margin: 0; /* Remove default browser margin */
+  
+  /* Font stack with fallbacks for different operating systems */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    
+  /* Font smoothing for better text rendering on different devices */
+  -webkit-font-smoothing: antialiased; /* WebKit browsers (Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale;  /* Firefox on macOS */
+}
+
+/* Code elements - For any code snippets or monospace text */
+code {
+  /* Monospace font stack for code readability */
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ============================================================================
+   CUSTOM STYLES
+   ============================================================================
+   
+   Add any custom CSS here that can't be achieved with Tailwind utilities.
+   Try to use Tailwind classes first before adding custom CSS.
+   
+   Examples of when to use custom CSS:
+   - Complex animations
+   - Very specific styling not covered by Tailwind
+   - Third-party component overrides
+*/
+
+/* Currently no custom styles needed - Tailwind handles all our styling! */
